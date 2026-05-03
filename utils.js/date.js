@@ -16,3 +16,26 @@ export const formatRelativeTime = (date) => {
 
 // Obtiene la hora actual para mensajes de chat (ej. "14:30")
 export const getChatTimestamp = () => new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+// Convierte segundos a formato MM:SS (ej: 1500 -> "25:00")
+export const formatPomodoroTime = (seconds) => {
+  const mins = Math.floor(seconds / 60);
+  const secs = seconds % 60;
+  return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+};
+
+// Inicia un temporizador que ejecuta una función cada segundo
+export const createTimer = (callback, seconds) => {
+  let timeLeft = seconds;
+  const intervalId = setInterval(() => {
+    timeLeft--;
+    callback(timeLeft, intervalId);
+    if (timeLeft <= 0) clearInterval(intervalId);
+  }, 1000);
+  return intervalId;
+};
+
+// Calcula el progreso en porcentaje para una barra de carga
+export const getTimerProgress = (current, total) => {
+  return ((total - current) / total) * 100;
+};
