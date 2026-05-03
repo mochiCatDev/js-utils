@@ -14,6 +14,8 @@ El repositorio está organizado en módulos independientes para facilitar su imp
 *   **`storage.js`**: Gestión simplificada de `localStorage` con manejo de errores.
 *   **`theme.js`**: Utilidades para gestionar variables CSS dinámicas y modos oscuros.
 *   **`validation.js`**: Validaciones de seguridad para formularios, emails y contraseñas.
+*   **`http.js`**: Simplificación de peticiones fetch para APIs.
+*   **`browser.js`**: Interacciones comunes con la ventana y el portapapeles.
 
 ## Cómo usar
 
