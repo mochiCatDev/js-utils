@@ -1,5 +1,6 @@
 // Selecciona el primer elemento del DOM que coincida
 export const $ = (selector) => document.querySelector(selector);
+export const $ID = (id) => document.getElementById(id);
 
 // Selecciona todos los elementos del DOM que coincidan
 export const $$ = (selector) => document.querySelectorAll(selector);
